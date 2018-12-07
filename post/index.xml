@@ -6,10 +6,20 @@
     <description>Recent content in Posts on macfisherman - exploring the Internet, one day at a time</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Nov 2018 20:46:04 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 06 Dec 2018 20:54:08 -0500</lastBuildDate>
     
 	<atom:link href="https://macfisherman.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perl and IPv6</title>
+      <link>https://macfisherman.github.io/post/perl-ipv6/</link>
+      <pubDate>Thu, 06 Dec 2018 20:54:08 -0500</pubDate>
+      
+      <guid>https://macfisherman.github.io/post/perl-ipv6/</guid>
+      <description>Since Perl 5.20, IPV6 support was improved to support a family neutral socket. This allows programs to be written for IPv4 and IPv6 in a fairly seamless way.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  #!/usr/bin/env perl use v5.20.0; use IO::Socket::IP; # taken directly from man page my $sock = IO::Socket::IP-&amp;gt;new( PeerHost =&amp;gt; &amp;#34;www.google.com&amp;#34;, PeerPort =&amp;gt; &amp;#34;http&amp;#34;, Type =&amp;gt; SOCK_STREAM, ) or die &amp;#34;Cannot construct socket - $@&amp;#34;; my $familyname = ( $sock-&amp;gt;sockdomain == PF_INET6 ) ?</description>
+    </item>
     
     <item>
       <title>Thinking About Ipv6</title>

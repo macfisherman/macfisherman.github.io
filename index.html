@@ -44,7 +44,7 @@
 <meta property="og:description" content="Exploring the Internet, one day at a time." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://macfisherman.github.io/" />
-<meta property="og:updated_time" content="2018-11-29T20:46:04-05:00"/>
+<meta property="og:updated_time" content="2018-12-06T20:54:08-05:00"/>
 
 <meta itemprop="name" content="macfisherman - exploring the Internet, one day at a time">
 <meta itemprop="description" content="Exploring the Internet, one day at a time.">
@@ -112,6 +112,28 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/perl-ipv6/">Perl and IPv6</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-12-06 </span>
+      
+        <span class="more-meta"> 236 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Since Perl 5.20, IPV6 support was improved to support a family neutral socket. This allows programs to be written for IPv4 and IPv6 in a fairly seamless way.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  #!/usr/bin/env perl use v5.20.0; use IO::Socket::IP; # taken directly from man page my $sock = IO::Socket::IP-&gt;new( PeerHost =&gt; &#34;www.google.com&#34;, PeerPort =&gt; &#34;http&#34;, Type =&gt; SOCK_STREAM, ) or die &#34;Cannot construct socket - $@&#34;; my $familyname = ( $sock-&gt;sockdomain == PF_INET6 ) ?
+    </div>
+    <div class="read-more">
+      <a href="/post/perl-ipv6/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/thinking-about-ipv6/">Thinking About Ipv6</a></h1>
